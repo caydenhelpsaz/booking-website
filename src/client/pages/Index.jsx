@@ -147,7 +147,7 @@ export default function Index() {
                         alignItems='center'
                     >
                         <Typography variant='body2'>
-                            © {new Date().getFullYear()} Cayden Serves AZ. All rights reserved.
+                            © {new Date().getFullYear()} Cayden Helps AZ. All rights reserved.
                         </Typography>
                         <Stack direction='row' spacing={3}>
                             <Link to='/terms' style={{ textDecoration: 'none' }}>

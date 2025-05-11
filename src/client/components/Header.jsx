@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Box } from '@mui/material';
-import Logo from '../assets/caydenservesaz-logo.png';
+import Logo from '../assets/caydenhelpsaz-logo.png';
 import { Link } from 'react-router';
 
 export default function Header() {
@@ -17,7 +17,7 @@ export default function Header() {
     >
 
       <Box>
-          <Link to='/'><img src={Logo} alt='Cayden Serves AZ Logo' width='200' height='200' /></Link>
+          <Link to='/'><img src={Logo} alt='Cayden Helps AZ Logo' width='200' height='200' /></Link>
       </Box>
       
     </AppBar>
