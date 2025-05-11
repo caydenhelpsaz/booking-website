@@ -76,8 +76,6 @@ export default function Index() {
 
                                 <li>General handyman work (small repairs, odd jobs, and problem-solving)</li>   
 
-                                <li>Yard work (weeding, raking, basic landscaping, and outdoor cleanups)</li>   
-
                                 <li>Interior design help (space planning, style consulting, layout ideas)</li>  
 
                                 <li>Floor plan creation (custom layouts with precise measurements)</li> 
@@ -95,6 +93,8 @@ export default function Index() {
                                 <li>Organization and decluttering (closets, garages, kitchens, and more)</li>   
 
                                 <li>Errands and personal assistant tasks (pickups, shopping, coordination)</li> 
+
+                                <p>+ many more! Just book me now and describe your task and I’ll follow up with a solution!</p>
                             </Typography>
                         </Container>
                     </Box>

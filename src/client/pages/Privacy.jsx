@@ -26,7 +26,7 @@ export default function Privacy() {
           </Typography>
 
           <Typography component="p" sx={{ mb: 2 }}>
-            If you have any concerns regarding your data or need to make changes, please email <Link href="mailto:ryan@builtbyry.com">ryan@builtbyry.com</Link>.
+            If you have any concerns regarding your data or need to make changes, please email <Link href="">* CREATE EMAIL!!!</Link>.
           </Typography>
 
           <Typography sx={{ mt: 4 }}>
