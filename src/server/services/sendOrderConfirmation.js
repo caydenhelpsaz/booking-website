@@ -1,0 +1,71 @@
+import { Resend } from 'resend';
+import dayjs from 'dayjs';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+const sendOrderConfirmation = async ({ customer, items, details, appointment, total }) => {
+  const { firstName, lastName, email, address, city, state, zip, phone } = customer;
+  const assemblyDate = dayjs(appointment.date).format('dddd, MMMM D, YYYY');
+  const assemblyTime = appointment.time;
+
+  const isIkea = Array.isArray(items) && items.length > 0;
+  const isFurniture = !!details;
+  const jobType = isIkea ? 'IKEA' : 'furniture';
+
+  let taskDetailsHtml = '';
+  if (isIkea) {
+    const itemsHtml = items.map(item => `
+      <li>
+        ${item.quantity} x ${item.display_name} @ ${item.formatted_cost} ea.
+      </li>
+    `).join('');
+    taskDetailsHtml = `
+      <p><strong>Items to be assembled:</strong></p>
+      <ul>${itemsHtml}</ul>
+    `;
+  } else if (isFurniture) {
+    taskDetailsHtml = `
+      <p><strong>Project Details:</strong></p>
+      <p>${details}</p>
+    `;
+  } else {
+    taskDetailsHtml = `<p><strong>No assembly details provided.</strong></p>`;
+  }
+
+  const totalHtml = isIkea ? `<p><strong>Total:</strong> $${total}&#42;</p>` : '';
+
+  const htmlContent = `
+    <p>Hi ${firstName},</p>
+    <p>Thank you for hiring me for your ${jobType} assembly! As a reminder, please have all item boxes in the room you would like to have your furniture located - additional fees will apply for moving boxes. The details of your task are outlined below:</p>
+    <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Phone:</strong> ${phone}</p>
+    <p><strong>Address:</strong> ${address}, ${city}, ${state} ${zip}</p>
+    <p><strong>Assembly Date/Time:</strong> ${assemblyDate} at ${assemblyTime}</p>
+    ${taskDetailsHtml}
+    ${totalHtml}
+    <br>
+    <p>I will send another confirmation via text on the day of assembly, as well as an approximate ETA. If you have any questions, you may reach me via email at ryan@builtbyry.com or text at (917) 397-0114 - see you soon!</p>
+    <p>- Ryan</p>
+    <br>
+    <hr>
+    <small>&#42; Invoice due upon completion of assembly. A 5% processing fee will be added to the total amount due. Payment methods accepted include PayPal, Venmo, Zelle, or cash (fee waived).</small>
+  `;
+
+  try {
+    await resend.emails.send({
+      from: 'Built By Ry <no-reply@builtbyry.com>',
+      replyTo: 'ryan@builtbyry.com',
+      to: email,
+      bcc: 'builtbyry123+github@gmail.com',
+      subject: `Furniture Assembly Service Confirmation - ${assemblyDate} at ${assemblyTime}`,
+      html: htmlContent,
+    });
+    return { success: true };
+  } catch (error) {
+    console.error("Email sending failed:", error);
+    return { success: false, error };
+  }
+};
+
+export default sendOrderConfirmation;

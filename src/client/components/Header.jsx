@@ -1,0 +1,25 @@
+import React from 'react';
+import { AppBar, Box } from '@mui/material';
+import Logo from '../assets/caydenservesaz-logo.png';
+import { Link } from 'react-router';
+
+export default function Header() {
+  return (
+    <AppBar
+      position='static'
+      sx={{
+        backgroundColor: 'transparent',
+        boxShadow: 'none',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+
+      <Box>
+          <Link to='/'><img src={Logo} alt='Cayden Serves AZ Logo' width='200' height='200' /></Link>
+      </Box>
+      
+    </AppBar>
+  );
+}
