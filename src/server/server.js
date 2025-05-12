@@ -2,6 +2,7 @@ import express from "express";
 import ViteExpress from "vite-express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import cron from 'node-cron'; 
 import sendOrderCofirmation from './services/sendOrderConfirmation.js';
 
 const app = express();
@@ -28,6 +29,22 @@ app.post("/api/submit-order", async (req, res) => {
   } catch (err) {
     console.error("Error handling order submission:", err);
     res.status(500).json({ message: "Server error", error: err });
+  }
+});
+
+// Self-ping setup to prevent app sleeping
+const RENDER_URL = "https://caydenhelpsaz.com";
+
+cron.schedule('*/14 * * * *', async () => {
+  try {
+    const res = await fetch(RENDER_URL);
+    if (res.ok) {
+      console.log(`[Ping] ${new Date().toISOString()} - Server pinged successfully.`);
+    } else {
+      console.warn(`[Ping] ${new Date().toISOString()} - Server responded with status: ${res.status}`);
+    }
+  } catch (err) {
+    console.error(`[Ping] ${new Date().toISOString()} - Error pinging server: ${err.message}`);
   }
 });
 
