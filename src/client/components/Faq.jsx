@@ -31,7 +31,7 @@ export default function Faq() {
                         },
                         {
                             question: 'What areas do you serve?',
-                            answer: 'Queens, NY/Western Long Island and Northern NJ.',
+                            answer: 'Phoenix, AZ and surrounding areas.',
                         },
                         {
                             question: 'What is your availability?',
