@@ -54,11 +54,10 @@ const sendOrderConfirmation = async ({ customer, items, details, appointment, to
 
   try {
     await resend.emails.send({
-      from: 'Built By Ry <no-reply@builtbyry.com>',
-      replyTo: 'ryan@builtbyry.com',
+      from: 'Cayden Helps AZ <cayden@caydenhelpsaz.com>',
       to: email,
-      bcc: 'builtbyry123+github@gmail.com',
-      subject: `Furniture Assembly Service Confirmation - ${assemblyDate} at ${assemblyTime}`,
+      bcc: 'caydenhelpsaz@gmail.com',
+      subject: `Cayden Helps AZ Booking Confirmation - ${assemblyDate} at ${assemblyTime}`,
       html: htmlContent,
     });
     return { success: true };

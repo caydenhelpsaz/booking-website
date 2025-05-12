@@ -48,7 +48,7 @@ export default function Checkout({ cartItems, setCartItems, checkoutOpen, handle
   const [errorMessage, setErrorMessage] = useState('');
   const [errorMessageOpen, setErrorMessageOpen] = useState(false);
 
-  const states = ['New Jersey', 'New York'];
+  const states = ['Arizona'];
 
   const disableSundays = (date) => {
     return dayjs(date).day() === 0; // Sunday = 0

@@ -24,7 +24,7 @@ export default function Index() {
 
     useEffect(() => {
         if (location.state?.orderSuccess) {
-            setSnackbarMessage('Your order was placed successfully!');
+            setSnackbarMessage('Your appointment was booked successfully!');
             setSnackbarSeverity('success');
             setSnackbarOpen(true);
     
@@ -54,7 +54,7 @@ export default function Index() {
                         onClose={handleCloseSnackbar}
                         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
                     >
-                        <Alert onClose={handleCloseSnackbar} severity={snackbarSeverity} sx={{ mt: 9 }}>
+                        <Alert onClose={handleCloseSnackbar} severity={snackbarSeverity} sx={{ mt: 15 }}>
                             {snackbarMessage}
                         </Alert>
                     </Snackbar>
