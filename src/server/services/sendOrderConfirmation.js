@@ -36,16 +36,16 @@ const sendOrderConfirmation = async ({ customer, items, details, appointment, to
 
   const htmlContent = `
     <p>Hi ${firstName},</p>
-    <p>Thank you for hiring me for your ${jobType} assembly! As a reminder, please have all item boxes in the room you would like to have your furniture located - additional fees will apply for moving boxes. The details of your task are outlined below:</p>
+    <p>Thank you for booking me! The details of your task are outlined below:</p>
     <p><strong>Name:</strong> ${firstName} ${lastName}</p>
     <p><strong>Email:</strong> ${email}</p>
     <p><strong>Phone:</strong> ${phone}</p>
     <p><strong>Address:</strong> ${address}, ${city}, ${state} ${zip}</p>
-    <p><strong>Assembly Date/Time:</strong> ${assemblyDate} at ${assemblyTime}</p>
+    <p><strong>Date/Time:</strong> ${assemblyDate} at ${assemblyTime}</p>
     ${taskDetailsHtml}
     ${totalHtml}
     <br>
-    <p>I will send another confirmation via text on the day of assembly, as well as an approximate ETA. If you have any questions, you may reach me via email at ryan@builtbyry.com or text at (917) 397-0114 - see you soon!</p>
+    <p>If you have any questions, you may reach me via email at cayden@caydenhelpsaz.com - see you soon!</p>
     <p>- Ryan</p>
     <br>
     <hr>
