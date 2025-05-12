@@ -59,7 +59,7 @@ export default function Faq() {
                         },
                         {
                             question: 'I have more questions, how can I reach you?',
-                            answer: 'Best way to contact me is via email at <a href="mailto:ryan@builtbyry.com">ryan@builtbyry.com</a>.',
+                            answer: 'Best way to contact me is via email at <a href="mailto:cayden@caydenhelpsaz.com">cayden@caydenhelpsaz.com</a>.',
                         },
                     ].map((faq, index) => (
                         <Accordion
