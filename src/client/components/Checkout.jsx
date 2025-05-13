@@ -234,12 +234,11 @@ export default function Checkout({ cartItems, setCartItems, checkoutOpen, handle
 
         <Header />
 
-        <DialogTitle sx={{ mx: 'auto' }}>
-          {isIkea && ('IKEA Assembly Booking')}
-          {!isIkea && ('Appointmet Booking')}
-        </DialogTitle>
-
         <DialogContent>
+          <Typography variant='h5' sx={{ textAlign: 'center' }}>
+            {isIkea && ('IKEA Assembly Booking')}
+            {!isIkea && ('Appointmet Booking')}            
+          </Typography>
 
           <Paper
             elevation={0}
@@ -371,7 +370,7 @@ export default function Checkout({ cartItems, setCartItems, checkoutOpen, handle
 
                 {/* Date and Time */}
                 <Grid>
-                  <Typography variant="subtitle1" sx={{ mt: 3, mb: 2, textAlign: 'center' }}>
+                  <Typography variant="subtitle1" sx={{ mb: 2, textAlign: 'center' }}>
                     Select Appointment Date:
                   </Typography>
                   <DateCalendar
@@ -524,7 +523,7 @@ export default function Checkout({ cartItems, setCartItems, checkoutOpen, handle
                 )}
 
                 {/* Submit Button */}
-                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center' }}>
 
                   <Stack>
                     <Button

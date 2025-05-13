@@ -120,7 +120,7 @@ export default function Index() {
                                     component={Link}
                                     to={'book-me'}
                                     variant='contained'
-                                    sx={{ mb: 8, px: 4, py: 2, borderRadius: 5, width: { md: '200px' } }}
+                                    sx={{ mb: 8, px: 4, py: 2, borderRadius: 5, width: { xs:'250px', md: '200px' } }}
                                 >
                                     Book Now
                                 </Button>
@@ -134,7 +134,7 @@ export default function Index() {
                                     component={Link}
                                     to={'ikea-assembly'}
                                     variant='contained'
-                                    sx={{ mb: 3, px: 4, py: 2, borderRadius: 5, width: { md: '200px' } }}
+                                    sx={{ mb: 3, px: 4, py: 2, borderRadius: 5, width: { xs:'250px', md: '200px' } }}
                                 >
                                     Ikea Assembly
                                 </Button>
