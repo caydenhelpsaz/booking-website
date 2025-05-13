@@ -59,78 +59,91 @@ export default function Index() {
                         </Alert>
                     </Snackbar>
 
-                    {/* Intro */}
+                    {/* Intro with "How can I help?" text and List of Services */}
                     <Box sx={{ py: 3, bgcolor: 'background.default' }}>
                         <Container maxWidth="md">
+                            {/* "How can I help?" Title */}
+                            <Typography
+                                variant="h4"
+                                sx={{
+                                    fontWeight: 'bold',
+                                    textAlign: 'center',
+                                    mb: 4, // margin below the title to separate from list
+                                }}
+                            >
+                                How can I help?
+                            </Typography>
+
                             <Typography
                                 variant="body1"
                                 sx={{ fontSize: '1.2rem', textAlign: 'center', lineHeight: 1.8 }}
                             >
-                                <li>Furniture assembly (including IKEA builds with 15% off the flat rate)</li>  
+                                {/* Map over the list of services */}
+                                {[
+                                    'Furniture assembly (Including 15% off the listed IKEA flat rate price)',
+                                    'Cleaning (deep cleans, touch-ups, recurring upkeep)',
+                                    'Mounting (TVs, shelves, curtains, mirrors, and more)',
+                                    'Moving help (lifting, loading, unloading, and packing)',
+                                    'General handyman work (small repairs, odd jobs, and problem-solving)',
+                                    'Interior design help (space planning, style consulting, layout ideas)',
+                                    'Floor plan creation (custom layouts with precise measurements)',
+                                    '3D modeling of real spaces (to-scale, accurate, and usable for projects)',
+                                    'Graphic design (logos, flyers, brand visuals)',
+                                    'Logo design (custom-built identity for any brand or project)',
+                                    '3D rendering (realistic visuals for spaces, products, or ideas)',
+                                    'Tech help (smart home setup, troubleshooting, or device help)',
+                                    'Organization and decluttering (closets, garages, kitchens, and more)',
+                                    'Errands and personal assistant tasks (pickups, shopping, coordination)',
+                                ].map((service, index) => (
+                                    <Box
+                                        key={index}
+                                        sx={{
+                                            backgroundColor: 'rgba(0, 0, 0, 0.05)', // subtle dark box
+                                            borderRadius: 2, // rounded corners
+                                            padding: 2, // padding inside the box
+                                            mb: 1, // space between each service
+                                        }}
+                                    >
+                                        <Typography variant="body1"><li>{service}</li></Typography>
+                                    </Box>
+                                ))}
 
-                                <li>Cleaning (deep cleans, touch-ups, recurring upkeep)</li>    
-
-                                <li>Mounting (TVs, shelves, curtains, mirrors, and more)</li>   
-
-                                <li>Moving help (lifting, loading, unloading, and packing)</li> 
-
-                                <li>General handyman work (small repairs, odd jobs, and problem-solving)</li>   
-
-                                <li>Interior design help (space planning, style consulting, layout ideas)</li>  
-
-                                <li>Floor plan creation (custom layouts with precise measurements)</li> 
-
-                                <li>3D modeling of real spaces (to-scale, accurate, and usable for projects)</li>   
-
-                                <li>Graphic design (logos, flyers, brand visuals)</li>  
-
-                                <li>Logo design (custom-built identity for any brand or project)</li>   
-
-                                <li>3D rendering (realistic visuals for spaces, products, or ideas)</li>    
-
-                                <li>Tech help (smart home setup, troubleshooting, or device help)</li>  
-
-                                <li>Organization and decluttering (closets, garages, kitchens, and more)</li>   
-
-                                <li>Errands and personal assistant tasks (pickups, shopping, coordination)</li> 
-
-                                <p>+ many more! Just book me now and describe your task and I’ll follow up with a solution!</p>
+                                <p>+ Many more! Just press the Book Now button, describe the details of your task and I’ll get back to you with a solution!</p>
                             </Typography>
                         </Container>
                     </Box>
 
                     {/* Navigation Buttons */}
                     <Box width={250} sx={{ mb: 20 }}>
-                            <Button
-                                key={'/book-me'}
-                                fullWidth
-                                component={Link}
-                                to={'book-me'}
-                                variant='contained'
-                                sx={{ mt: 2, mb: 6, px: 4, py: 2, borderRadius: 5 }}
-                            >
-                                Book Me!
-                            </Button>
+                        <Button
+                            key={'/book-me'}
+                            fullWidth
+                            component={Link}
+                            to={'book-me'}
+                            variant='contained'
+                            sx={{ mt: 2, mb: 6, px: 4, py: 2, borderRadius: 5 }}
+                        >
+                            Book Now
+                        </Button>
 
-                            <Typography
-                                variant='body1'
-                                sx={{ mt: 3, mb: 3 }}
-                            >
-                                Have an IKEA item? Guaranteed 15% off the flat rate price from TaskRabbit!
-                            </Typography>
+                        <Typography
+                            variant='body1'
+                            sx={{ mt: 3, mb: 3 }}
+                        >
+                            Have an IKEA item? Guaranteed 15% off the flat rate price from TaskRabbit!
+                        </Typography>
 
-                            <Button
-                                key={'/ikea-assembly'}
-                                fullWidth
-                                component={Link}
-                                to={'ikea-assembly'}
-                                variant='contained'
-                                sx={{ mt: 2, mb: 3, px: 4, py: 2, borderRadius: 5 }}
-                            >
-                                Ikea Assembly
-                            </Button>
+                        <Button
+                            key={'/ikea-assembly'}
+                            fullWidth
+                            component={Link}
+                            to={'ikea-assembly'}
+                            variant='contained'
+                            sx={{ mt: 2, mb: 3, px: 4, py: 2, borderRadius: 5 }}
+                        >
+                            Ikea Assembly
+                        </Button>
                     </Box>
-
                 </Stack>
 
                 <Divider sx={{ width: '100%' }} />
