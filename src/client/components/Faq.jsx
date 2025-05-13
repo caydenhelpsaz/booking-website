@@ -15,8 +15,8 @@ export default function Faq() {
             <Box
                 sx={{
                     width: '100%',
-                    py: 6,
-                    mt: 4,
+                    py: 4,
+                    mt: 3,
                 }}
             >
                 <Container maxWidth='md'>
@@ -27,7 +27,7 @@ export default function Faq() {
                     {[  
                         {
                             question: 'What are your rates?',
-                            answer: "IKEA assembly jobs are fixed rate per item, based on current assembly rates from TaskRabbit (assembly service owned by IKEA). All other jobs are $50/hour, the average rate charged by taskers on that same platform unless otherwise stated. However, if you can provide a link to your item (i.e. Wayfair, Target, Walmart, Amazon etc.) that includes professional assembly as an optional add-on, I will match whatever quote they give.",
+                            answer: "IKEA assembly jobs are fixed rate per item, based on current assembly rates from TaskRabbit (assembly service owned by IKEA). I will include 15% off their listed flat rate. All other jobs are $50/hour, the average rate charged by taskers on that same platform unless otherwise stated. However, if you can provide a link to your item (i.e. Wayfair, Target, Walmart, Amazon etc.) that includes professional assembly as an optional add-on, I will match whatever quote they give.",
                         },
                         {
                             question: 'What areas do you serve?',
@@ -36,10 +36,6 @@ export default function Faq() {
                         {
                             question: 'What is your availability?',
                             answer: 'My availability changes month to month. Click the "Book Now" button to see my next open slot.',
-                        },
-                        {
-                            question: 'Do you assemble furniture only from IKEA?',
-                            answer: 'No, I assemble furniture from any brand, as long as it includes instructions and all necessary parts. For IKEA assembly, tap the "IKEA Assembly" button and search/add your items before checkout. For non-IKEA assembly, tap the "Furniture Assembly" button and fill out the checkout form completely.',
                         },
                         {
                             question: 'What if my IKEA item is not listed?',

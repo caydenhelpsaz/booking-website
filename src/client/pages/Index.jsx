@@ -44,7 +44,7 @@ export default function Index() {
         <Box display='flex' flexDirection='column' minHeight='100vh'>
             <Container maxWidth='md'>
                 {/* Main Content */}
-                <Stack spacing={3} flexGrow={1} sx={{ alignItems: 'center', mb: 15 }}>
+                <Stack spacing={2} flexGrow={1} sx={{ alignItems: 'center', mb: 4 }}>
                     <Header />
 
                     {/* Snackbar for displaying success message */}
@@ -68,7 +68,7 @@ export default function Index() {
                                 sx={{
                                     fontWeight: 'bold',
                                     textAlign: 'center',
-                                    mb: 4, // margin below the title to separate from list
+                                    mb: 4
                                 }}
                             >
                                 How can I help?
@@ -76,7 +76,6 @@ export default function Index() {
 
                             <Typography
                                 variant="body1"
-                                sx={{ fontSize: '1.2rem', textAlign: 'center', lineHeight: 1.8 }}
                             >
                                 {/* Map over the list of services */}
                                 {[
@@ -108,42 +107,40 @@ export default function Index() {
                                     </Box>
                                 ))}
 
-                                <p>+ Many more! Just press the Book Now button, describe the details of your task and I’ll get back to you with a solution!</p>
+                                <Typography variant='body1' sx={{ my: 4 }}>
+                                    + Many more! Just press the Book Now button, describe the details of your task and I’ll get back to you with a solution!
+                                </Typography>
+                                
                             </Typography>
+
+                            {/* Navigation Buttons */}
+                            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                <Button
+                                    key={'/book-me'}
+                                    component={Link}
+                                    to={'book-me'}
+                                    variant='contained'
+                                    sx={{ mb: 8, px: 4, py: 2, borderRadius: 5, width: { md: '200px' } }}
+                                >
+                                    Book Now
+                                </Button>
+
+                                <Typography variant='body1' sx={{ mb: 4, textAlign: 'center' }}>
+                                    Have an IKEA item? Guaranteed 15% off the flat rate price from TaskRabbit!
+                                </Typography>
+
+                                <Button
+                                    key={'/ikea-assembly'}
+                                    component={Link}
+                                    to={'ikea-assembly'}
+                                    variant='contained'
+                                    sx={{ mb: 3, px: 4, py: 2, borderRadius: 5, width: { md: '200px' } }}
+                                >
+                                    Ikea Assembly
+                                </Button>
+                            </Box>
                         </Container>
-                    </Box>
-
-                    {/* Navigation Buttons */}
-                    <Box width={250} sx={{ mb: 20 }}>
-                        <Button
-                            key={'/book-me'}
-                            fullWidth
-                            component={Link}
-                            to={'book-me'}
-                            variant='contained'
-                            sx={{ mt: 2, mb: 6, px: 4, py: 2, borderRadius: 5 }}
-                        >
-                            Book Now
-                        </Button>
-
-                        <Typography
-                            variant='body1'
-                            sx={{ mt: 3, mb: 3 }}
-                        >
-                            Have an IKEA item? Guaranteed 15% off the flat rate price from TaskRabbit!
-                        </Typography>
-
-                        <Button
-                            key={'/ikea-assembly'}
-                            fullWidth
-                            component={Link}
-                            to={'ikea-assembly'}
-                            variant='contained'
-                            sx={{ mt: 2, mb: 3, px: 4, py: 2, borderRadius: 5 }}
-                        >
-                            Ikea Assembly
-                        </Button>
-                    </Box>
+                    </Box>          
                 </Stack>
 
                 <Divider sx={{ width: '100%' }} />
