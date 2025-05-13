@@ -259,7 +259,7 @@ const Search = ({ onAddToCart, setSnackbarOpen, setSnackbarMessage }) => {
                 </Typography>
 
                 <Typography variant='body2' color='text.secondary'>
-                  Assembly Price: $
+                  IKEA Assembly Price: $
                   {(selectedProduct.assembly_price_cents * 0.01).toFixed(2)}
                 </Typography>
 
@@ -289,14 +289,26 @@ const Search = ({ onAddToCart, setSnackbarOpen, setSnackbarMessage }) => {
                   }}
                 />
 
-                <Typography>
-                  Subtotal: $
-                  {(
-                    selectedProduct.assembly_price_cents *
-                    0.01 *
-                    (parseInt(quantity, 10) || 0)
-                  ).toFixed(2)}
-                </Typography>
+                <Box>
+                  <Typography sx={{ textDecoration: 'line-through', color: 'text.secondary' }}>
+                    Subtotal: $
+                    {(
+                      selectedProduct.assembly_price_cents *
+                      0.01 *
+                      (parseInt(quantity, 10) || 0)
+                    ).toFixed(2)}
+                  </Typography>
+
+                  <Typography sx={{ fontWeight: 'bold', color: 'success.main' }}>
+                    Subtotal (15% off): $
+                    {(
+                      selectedProduct.assembly_price_cents *
+                      0.01 *
+                      (parseInt(quantity, 10) || 0) *
+                      0.85
+                    ).toFixed(2)}
+                  </Typography>
+                </Box>
 
                 </Stack>
 

@@ -79,7 +79,7 @@ export default function Checkout({ cartItems, setCartItems, checkoutOpen, handle
       Math.max(
         cartItems.reduce(
           (sum, item) =>
-            sum + item.assembly_price_cents * item.quantity * 0.01,
+            sum + item.assembly_price_cents * item.quantity * 0.01 * 0.85,
           0
         ),
         52
@@ -477,7 +477,7 @@ export default function Checkout({ cartItems, setCartItems, checkoutOpen, handle
                           </Box>
 
                           <Typography sx={{ mt: 0.5, whiteSpace: 'nowrap', fontWeight: 500 }}>
-                            ${(item.assembly_price_cents * 0.01 * item.quantity).toFixed(2)}
+                            ${(item.assembly_price_cents * 0.01 * 0.85 * item.quantity).toFixed(2)}
                           </Typography>
 
                           <IconButton onClick={() => removeItem(item.item_no)} size='small' color='error'>
@@ -495,17 +495,7 @@ export default function Checkout({ cartItems, setCartItems, checkoutOpen, handle
                       <Box sx={{ ml: 2, mt: 2, mb: 4, display: 'flex', justifyContent: 'flex-end' }}>
                         <Stack>
                           <Typography fontWeight='bold'>
-                            Total Assembly Cost: $
-                            {cartItems.length > 0
-                              ? Math.max(
-                                cartItems.reduce(
-                                  (sum, item) =>
-                                    sum + item.assembly_price_cents * item.quantity * 0.01,
-                                  0
-                                ),
-                                52
-                              ).toFixed(2)
-                              : '0.00'}
+                            Total Assembly Cost: ${total}
                           </Typography>
                           <Typography>
                             <small>$0 due now - balance due upon completion of assembly.</small>
