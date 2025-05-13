@@ -73,7 +73,7 @@ export default function IkeaAssembly() {
             autoHideDuration={2000}
             onClose={handleCloseSnackbar}
             anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-            sx={{ mb: 20 }}
+            sx={{ mb: 15 }}
           >
             <Alert 
               onClose={handleCloseSnackbar} 

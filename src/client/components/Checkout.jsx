@@ -242,7 +242,7 @@ export default function Checkout({ cartItems, setCartItems, checkoutOpen, handle
 
           <Paper
             elevation={0}
-            sx={{ p: 4, mt: 1, maxWidth: 600, mx: 'auto' }}
+            sx={{ p: 2, mt: 1, maxWidth: 600, mx: 'auto' }}
           >
 
             <form onSubmit={submitOrder}>
@@ -423,51 +423,52 @@ export default function Checkout({ cartItems, setCartItems, checkoutOpen, handle
                       )}
 
                       {cartItems.map((item) => (
-                        <Box key={item.item_no} sx={{ ml: 2, display: 'flex', alignItems: 'flex-start', gap: 1.5, flexWrap: 'wrap', mb: 2 }}>
+                        <Box key={item.item_no} sx={{ display: 'flex', alignItems: 'flex-start', gap: 2, flexWrap: 'wrap', mb: 3 }}>
 
-                        <TextField
-                          label="Qty"
-                          type="number"
-                          size="small"
-                          value={item.quantity === 0 ? '' : item.quantity}
-                          onChange={(e) => {
-                            const val = e.target.value;
-                            // Allow blank input
-                            if (val === '') {
-                              updateQuantity(item.item_no, 0);
-                              return;
-                            }
+                          <TextField
+                            label="Qty"
+                            type="number"
+                            size="small"
+                            value={item.quantity === 0 ? '' : item.quantity}
+                            onChange={(e) => {
+                              const val = e.target.value;
+                              // Allow blank input
+                              if (val === '') {
+                                updateQuantity(item.item_no, 0);
+                                return;
+                              }
 
-                            const parsed = parseInt(val, 10);
-                            if (!isNaN(parsed)) {
-                              updateQuantity(item.item_no, parsed);
-                            }
-                          }}
-                          onBlur={() => {
-                            // On blur, if quantity is 0 or invalid, set it to 1
-                            if (!item.quantity || item.quantity < 1) {
-                              updateQuantity(item.item_no, 1);
-                            }
-                          }}
-                          sx={{ width: 75 }}
-                          slotProps={{
-                            input: {
-                              min: 1,
-                              onKeyDown: (e) => {
-                                if (['e', 'E', '+', '-', '.', ','].includes(e.key)) {
-                                  e.preventDefault();
-                                }
+                              const parsed = parseInt(val, 10);
+                              if (!isNaN(parsed)) {
+                                updateQuantity(item.item_no, parsed);
+                              }
+                            }}
+                            onBlur={() => {
+                              // On blur, if quantity is 0 or invalid, set it to 1
+                              if (!item.quantity || item.quantity < 1) {
+                                updateQuantity(item.item_no, 1);
+                              }
+                            }}
+                            sx={{ width: 50 }}
+                            slotProps={{
+                              input: {
+                                min: 1,
+                                onKeyDown: (e) => {
+                                  if (['e', 'E', '+', '-', '.', ','].includes(e.key)) {
+                                    e.preventDefault();
+                                  }
+                                },
                               },
-                            },
-                          }}
-                        />
-
-
-                          <Box component='img' src={item.image_link} alt={item.display_name} width={40} height={40} loading='lazy' sx={{ borderRadius: 1 }} />
+                            }}
+                          />
 
                           <Box sx={{ flexGrow: 1, minWidth: 0 }}>
                             <Typography variant='body2' sx={{ fontWeight: 'bold', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                              {item.name} - {item.article_number}
+                              {item.name}
+                            </Typography>
+
+                            <Typography variant='body2' sx={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                              {item.article_number}
                             </Typography>
 
                             <Typography variant='caption' sx={{ color: 'text.secondary', overflow: 'hidden', textOverflow: 'ellipsis' }}>
@@ -475,7 +476,7 @@ export default function Checkout({ cartItems, setCartItems, checkoutOpen, handle
                             </Typography>
                           </Box>
 
-                          <Typography sx={{ mt: 0.5, whiteSpace: 'nowrap', fontWeight: 500 }}>
+                          <Typography sx={{ whiteSpace: 'nowrap', fontWeight: 500 }}>
                             ${(item.assembly_price_cents * 0.01 * 0.85 * item.quantity).toFixed(2)}
                           </Typography>
 
@@ -491,7 +492,7 @@ export default function Checkout({ cartItems, setCartItems, checkoutOpen, handle
                     {/* Total Assembly Cost */}
                     <Grid>
 
-                      <Box sx={{ ml: 2, mt: 2, mb: 4, display: 'flex', justifyContent: 'flex-end' }}>
+                      <Box sx={{ ml: 2, mb: 2, display: 'flex', justifyContent: 'flex-end' }}>
                         <Stack>
                           <Typography fontWeight='bold'>
                             Total Assembly Cost: ${total}
@@ -523,7 +524,7 @@ export default function Checkout({ cartItems, setCartItems, checkoutOpen, handle
                 )}
 
                 {/* Submit Button */}
-                <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center' }}>
+                <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}>
 
                   <Stack>
                     <Button

@@ -57,11 +57,13 @@ export default function Cart({ cartItems, setCartItems, onCheckoutClick }) {
             <Button
               variant='contained'
               sx={{
+                width: {
+                  xs: '125px',
+                  md: '200px' 
+                },
                 ml: 1,
-                mt: 2, 
-                mb: 4, 
-                px: 4, 
-                py: 2,
+                py:1, 
+                mb: 2, 
                 borderRadius: 5 
               }}
               onClick={onCheckoutClick}
@@ -74,10 +76,12 @@ export default function Cart({ cartItems, setCartItems, onCheckoutClick }) {
               variant='outlined'
               color='info'
               sx={{
-                mt: 2,
-                mb: 4,
-                px: 4,
-                py: 2,
+                width: {
+                  xs: '125px',
+                  md: '200px' 
+                },
+                py:1, 
+                mb: 2, 
                 borderRadius: 5
               }}
               component={Link}

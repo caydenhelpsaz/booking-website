@@ -250,8 +250,12 @@ const Search = ({ onAddToCart, setSnackbarOpen, setSnackbarMessage }) => {
 
               <Box>
 
+                <Typography variant='subtitle1' sx={{ fontWeight: 'bold' }}>
+                  {selectedProduct.name}
+                </Typography>
+
                 <Typography variant='subtitle1'>
-                  {selectedProduct.name} - {selectedProduct.article_number}
+                  {selectedProduct.article_number}
                 </Typography>
 
                 <Typography variant='body2' color='text.secondary'>
@@ -279,7 +283,7 @@ const Search = ({ onAddToCart, setSnackbarOpen, setSnackbarMessage }) => {
                   }}
                   error={quantityError}
                   helperText={quantityError ? 'Quantity must be greater than 0' : ''}
-                  sx={{ width: 75 }}
+                  sx={{ width: 50 }}
                   slotProps={{
                     htmlInput: {
                       min: 0,
