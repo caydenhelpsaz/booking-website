@@ -55,7 +55,7 @@ export default function IkeaAssembly() {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       
-      <Stack spacing={4}>
+      <Stack spacing={2}>
 
         <Header />
 

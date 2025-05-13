@@ -44,7 +44,7 @@ export default function Index() {
         <Box display='flex' flexDirection='column' minHeight='100vh'>
             <Container maxWidth='md'>
                 {/* Main Content */}
-                <Stack spacing={4} flexGrow={1} sx={{ alignItems: 'center', mb: 10 }}>
+                <Stack spacing={3} flexGrow={1} sx={{ alignItems: 'center', mb: 15 }}>
                     <Header />
 
                     {/* Snackbar for displaying success message */}

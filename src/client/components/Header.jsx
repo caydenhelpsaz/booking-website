@@ -17,7 +17,7 @@ export default function Header() {
     >
 
       <Box>
-          <Link to='/'><img src={Logo} alt='Cayden Helps AZ Logo' width='200' height='200' /></Link>
+          <Link to='/'><img src={Logo} alt='Cayden Helps AZ Logo' width='180' height='180' /></Link>
       </Box>
       
     </AppBar>

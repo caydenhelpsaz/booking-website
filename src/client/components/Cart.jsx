@@ -48,75 +48,46 @@ export default function Cart({ cartItems, setCartItems, onCheckoutClick }) {
             <ShoppingCart />
           </Badge>
 
-          <Typography variant='body2' fontWeight='bold'>
-            Total: ${getTotal()}
-          </Typography>
+          {/* Checkout Button */}
+          <Box 
+            display='flex' 
+            justifyContent='center'
+            gap={2}
+          >
+            <Button
+              variant='contained'
+              sx={{
+                ml: 1,
+                mt: 2, 
+                mb: 4, 
+                px: 4, 
+                py: 2,
+                borderRadius: 5 
+              }}
+              onClick={onCheckoutClick}
+              disabled={cartItems.length === 0}
+            >
+              Checkout
+            </Button>
 
-          {getTotal() < 52 && (
-            <>
-              <IconButton onClick={handleDialogOpen}>
-                <InfoOutlinedIcon fontSize='small' />
-              </IconButton>
-
-              <Dialog open={dialogOpen} onClose={handleDialogClose}>
-
-                <DialogTitle>Minimum Order Required</DialogTitle>
-
-                <DialogContent>
-                  <Typography>
-                    A minimum order of <strong>$52.00</strong> is required. Your current total is <strong>${getTotal()}</strong>.
-                  </Typography>
-                </DialogContent>
-
-                <DialogActions>
-                  <Button onClick={handleDialogClose} autoFocus>OK</Button>
-                </DialogActions>
-
-              </Dialog>
-            </>
-          )}
+            <Button
+              variant='outlined'
+              color='info'
+              sx={{
+                mt: 2,
+                mb: 4,
+                px: 4,
+                py: 2,
+                borderRadius: 5
+              }}
+              component={Link}
+              to='/'
+            >
+              Go Back
+            </Button>
+          </Box>
 
         </Stack>
-
-        {/* Checkout Button */}
-        <Box 
-          display='flex' 
-          justifyContent='center'
-          gap={2}
-        >
-          <Button
-            variant='contained'
-            size='large'
-            sx={{
-              mt: 2, 
-              mb: 4, 
-              px: 4, 
-              py: 2,
-              borderRadius: 5 
-            }}
-            onClick={onCheckoutClick}
-            disabled={cartItems.length === 0}
-          >
-            Checkout
-          </Button>
-
-          <Button
-            variant='outlined'
-            color='info'
-            size='large'
-            sx={{
-              mt: 2,
-              mb: 4,
-              px: 4,
-              py: 2,
-              borderRadius: 5
-            }}
-            component={Link}
-            to='/'
-          >
-            Go Back
-          </Button>
-        </Box>
 
       </Box>
       
