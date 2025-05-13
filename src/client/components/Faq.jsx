@@ -39,7 +39,7 @@ export default function Faq() {
                         },
                         {
                             question: 'What if my IKEA item is not listed?',
-                            answer: 'Send me an email at <a href="mailto:ryan@builtbyry.com">ryan@builtbyry.com</a> and I will add your item(s) and complete the booking for you.',
+                            answer: 'Send me an email at <a href="mailto:cayden@caydenhelpsaz.com">cayden@caydenhelpsaz.com</a> and I will add your item(s) and complete the booking for you.',
                         },
                         {
                             question: 'Do you bring tools with you?',
@@ -47,7 +47,7 @@ export default function Faq() {
                         },
                         {
                             question: 'How does payment work? Are there any additional fees?',
-                            answer: '$0 due when making an appointment. Payment is due after completion of assembly via cash or card. A 5% processing fee applies unless paid with cash.',
+                            answer: '$0 due when making an appointment. Payment via cash or card is due after completion of the job. A 5% processing fee applies unless paid with cash.',
                         },
                         {
                             question: 'I have more questions, how can I reach you?',
