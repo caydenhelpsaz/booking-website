@@ -237,7 +237,7 @@ export default function Checkout({ cartItems, setCartItems, checkoutOpen, handle
         <DialogContent>
           <Typography variant='h5' sx={{ textAlign: 'center' }}>
             {isIkea && ('IKEA Assembly Booking')}
-            {!isIkea && ('Appointmet Booking')}            
+            {!isIkea && ('Appointment Booking')}            
           </Typography>
 
           <Paper
