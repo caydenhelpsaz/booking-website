@@ -370,7 +370,7 @@ export default function Checkout({ cartItems, setCartItems, checkoutOpen, handle
 
                 {/* Date and Time */}
                 <Grid>
-                  <Typography variant="subtitle1" sx={{ mb: 2, textAlign: 'center' }}>
+                  <Typography variant="subtitle1" sx={{ mt: 2, mb: 2, textAlign: 'center' }}>
                     Select Appointment Date:
                   </Typography>
                   <DateCalendar

@@ -10,7 +10,6 @@ const sendOrderConfirmation = async ({ customer, items, details, appointment, to
 
   const isIkea = Array.isArray(items) && items.length > 0;
   const isFurniture = !!details;
-  const jobType = isIkea ? 'IKEA' : 'furniture';
 
   let taskDetailsHtml = '';
   if (isIkea) {
@@ -20,7 +19,7 @@ const sendOrderConfirmation = async ({ customer, items, details, appointment, to
       </li>
     `).join('');
     taskDetailsHtml = `
-      <p><strong>Items to be assembled:</strong></p>
+      <p><strong>Project Details:</strong></p>
       <ul>${itemsHtml}</ul>
     `;
   } else if (isFurniture) {
@@ -45,11 +44,15 @@ const sendOrderConfirmation = async ({ customer, items, details, appointment, to
     ${taskDetailsHtml}
     ${totalHtml}
     <br>
-    <p>If you have any questions, you may reach me via email at cayden@caydenhelpsaz.com - see you soon!</p>
-    <p>- Ryan</p>
+    <p>Be on the lookout for a text from me confirming the appointment and in case I have any clarifying questions. Also, on the day of I’ll let you know when I’m on my way with my ETA. Looking forward to helping!</p>
+    <p>
+      Best, 
+      <br> 
+      Cayden
+    </p>
     <br>
     <hr>
-    <small>&#42; Invoice due upon completion of assembly. A 5% processing fee will be added to the total amount due. Payment methods accepted include PayPal, Venmo, Zelle, or cash (fee waived).</small>
+    <small>&#42; Invoice due upon completion of assembly. A 5% processing fee will be added to the total amount due. Payment methods accepted include credit/debit card or cash (fee waived).</small>
   `;
 
   try {
