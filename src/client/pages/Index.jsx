@@ -134,9 +134,22 @@ export default function Index() {
                                     component={Link}
                                     to={'ikea-assembly'}
                                     variant='contained'
-                                    sx={{ mb: 3, px: 4, py: 2, borderRadius: 5, width: { xs:'250px', md: '200px' } }}
+                                    sx={{ mb: 8, px: 4, py: 2, borderRadius: 5, width: { xs:'250px', md: '200px' } }}
                                 >
                                     Ikea Assembly
+                                </Button>
+
+                                <Typography variant='body1' sx={{ mb: 4, textAlign: 'center' }}>
+                                    Want to see some of my previous work and read what past clients have said about working with me?
+                                </Typography>
+
+                                <Button
+                                    href={'https://www.instagram.com/caydenhelpsaz'}
+                                    target="_blank"
+                                    variant='contained'
+                                    sx={{ mb: 3, px: 4, py: 2, borderRadius: 5, width: { xs:'250px', md: '200px' } }}
+                                >
+                                    Click Here!
                                 </Button>
                             </Box>
                         </Container>
