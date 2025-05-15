@@ -91,7 +91,7 @@ export default function Checkout({
 
         // if (day === 4) return true; /** Disable all Thursdays */
 
-        // if (day === 5) return true; /** Disable all Fridays */
+        if (day === 5) return true; /** Disable all Fridays */
 
         // if (day === 6) return true; /** Disable all Saturdays */
 
@@ -111,6 +111,7 @@ export default function Checkout({
 
         const disabledDates = [
             '2025-05-18',
+            '2025-05-25',
             '2025-07-04', // Independence Day
             '2025-11-27', // Thanksgiving
             '2025-12-25', // Christmas
@@ -122,24 +123,24 @@ export default function Checkout({
         return false; // Otherwise allow
     };
 
-    /**
-     * ================================================================================
-     * 
-     * SET AVAILABLE TIMES:
-     * 
-     * Add or delete times between the [] brackets
-     * 
-     * Make sure each time is enclosed in single quotes and followed by a comma
-     * 
-     * I included some times below
-     * 
-     * ================================================================================
-     */
-
     const getAvailableTimes = (date) => {
         if (!date) return [];
 
         const day = dayjs(date).day(); // Sunday: 0, Monday: 1, ..., Saturday: 6
+
+        /**
+         * ================================================================================
+         * 
+         * SET AVAILABLE TIMES:
+         * 
+         * Add or delete times between the [] brackets
+         * 
+         * Make sure each time is enclosed in single quotes and followed by a comma
+         * 
+         * I included some times below
+         * 
+         * ================================================================================
+         */
 
         // Sunday
         if (day === 0)
@@ -172,17 +173,6 @@ export default function Checkout({
         // Monday
         if (day === 1)
             return [
-                '8:00 AM',
-                '8:30 AM',
-                '9:00 AM',
-                '9:30 AM',
-                '10:00 AM',
-                '10:30 AM',
-                '11:00 AM',
-                '11:30 AM',
-                '12:00 PM',
-                '12:30 PM',
-                '1:00 PM',
                 '1:30 PM',
                 '2:00 PM',
                 '2:30 PM',
