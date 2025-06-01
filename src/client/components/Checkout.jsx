@@ -87,11 +87,11 @@ export default function Checkout({
 
         // if (day === 2) return true; /** Disable all Tuesdays */
 
-        if (day === 3) return true; /** Disable all Wednesdays */
+       // if (day === 3) return true; /** Disable all Wednesdays */
 
         // if (day === 4) return true; /** Disable all Thursdays */
 
-        if (day === 5) return true; /** Disable all Fridays */
+       // if (day === 5) return true; /** Disable all Fridays */
 
         // if (day === 6) return true; /** Disable all Saturdays */
 
@@ -110,8 +110,8 @@ export default function Checkout({
          */
 
         const disabledDates = [
-            '2025-05-18',
-            '2025-05-25',
+            '2025-06-18',
+            '2025-06-19',
             '2025-07-04', // Independence Day
             '2025-11-27', // Thanksgiving
             '2025-12-25', // Christmas
@@ -145,10 +145,6 @@ export default function Checkout({
         // Sunday
         if (day === 0)
             return [
-                '8:00 AM',
-                '8:30 AM',
-                '9:00 AM',
-                '9:30 AM',
                 '10:00 AM',
                 '10:30 AM',
                 '11:00 AM',
@@ -173,6 +169,13 @@ export default function Checkout({
         // Monday
         if (day === 1)
             return [
+                '10:00 AM',
+                '10:30 AM',
+                '11:00 AM',
+                '11:30 AM',
+                '12:00 PM',
+                '12:30 PM',
+                '1:00 PM',
                 '1:30 PM',
                 '2:00 PM',
                 '2:30 PM',
@@ -190,10 +193,6 @@ export default function Checkout({
         // Tuesday
         if (day === 2)
             return [
-                '8:00 AM',
-                '8:30 AM',
-                '9:00 AM',
-                '9:30 AM',
                 '10:00 AM',
                 '10:30 AM',
                 '11:00 AM',
@@ -218,10 +217,6 @@ export default function Checkout({
         // Wednesday
         if (day === 3)
             return [
-                '8:00 AM',
-                '8:30 AM',
-                '9:00 AM',
-                '9:30 AM',
                 '10:00 AM',
                 '10:30 AM',
                 '11:00 AM',
@@ -246,10 +241,6 @@ export default function Checkout({
         // Thursday
         if (day === 4)
             return [
-                '8:00 AM',
-                '8:30 AM',
-                '9:00 AM',
-                '9:30 AM',
                 '10:00 AM',
                 '10:30 AM',
                 '11:00 AM',
@@ -274,10 +265,6 @@ export default function Checkout({
         // Friday
         if (day === 5)
             return [
-                '8:00 AM',
-                '8:30 AM',
-                '9:00 AM',
-                '9:30 AM',
                 '10:00 AM',
                 '10:30 AM',
                 '11:00 AM',
@@ -302,10 +289,6 @@ export default function Checkout({
         // Saturday
         if (day === 6)
             return [
-                '8:00 AM',
-                '8:30 AM',
-                '9:00 AM',
-                '9:30 AM',
                 '10:00 AM',
                 '10:30 AM',
                 '11:00 AM',
