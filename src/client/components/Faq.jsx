@@ -47,7 +47,7 @@ export default function Faq() {
                         },
                         {
                             question: 'How does payment work? Are there any additional fees?',
-                            answer: '$0 due when making an appointment and any fees or expenses will be clearly stated beforehand. Payment via cash or card is due after completion of the job. A 5% processing fee may apply for unless paid with cash.',
+                            answer: '$0 due when making an appointment and any fees or expenses will be clearly stated beforehand. Payment via cash or card is due after completion of the job. A 5% processing fee may apply unless paid with cash.',
                         },
                         {
                             question: 'I have more questions, how can I reach you?',
