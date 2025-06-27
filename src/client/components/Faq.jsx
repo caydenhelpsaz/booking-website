@@ -27,7 +27,7 @@ export default function Faq() {
                     {[  
                         {
                             question: 'What are your rates?',
-                            answer: "IKEA assembly jobs are fixed rate per item, based on current assembly rates from TaskRabbit (assembly service owned by IKEA). I will include 15% off their listed flat rate. All other jobs are $50/hour, the average rate charged by taskers on that same platform unless otherwise stated. However, if you can provide a link to your item (i.e. Wayfair, Target, Walmart, Amazon etc.) that includes professional assembly as an optional add-on, I will match whatever quote they give.",
+                            answer: "IKEA assembly jobs are fixed rate per item, based on current assembly rates from TaskRabbit (assembly service owned by IKEA). I will also include 15% off their listed flat rate. All other jobs are $50/hour, the average rate charged by taskers on that same platform unless otherwise stated. However, if you can provide a link to your item (i.e. Wayfair, Target, Walmart, Amazon etc.) that includes professional assembly as an optional add-on, I will BEAT whatever quote they give.",
                         },
                         {
                             question: 'What areas do you serve?',
@@ -35,11 +35,11 @@ export default function Faq() {
                         },
                         {
                             question: 'What is your availability?',
-                            answer: 'My availability changes month to month. Click the "Book Now" button to see my next open slot.',
+                            answer: 'Generally from 9am-8pm daily, but my availability changes month to month. Click the "Book Now" button to see all of my availability!',
                         },
                         {
                             question: 'What if my IKEA item is not listed?',
-                            answer: 'Send me an email at <a href="mailto:cayden@caydenhelpsaz.com">cayden@caydenhelpsaz.com</a> and I will add your item(s) and complete the booking for you.',
+                            answer: 'Send me an email at <a href="mailto:cayden@caydenhelpsaz.com">cayden@caydenhelpsaz.com</a> with the item and article number(s) and I will find the listing manually and send you back a quote!.',
                         },
                         {
                             question: 'Do you bring tools with you?',
@@ -47,7 +47,7 @@ export default function Faq() {
                         },
                         {
                             question: 'How does payment work? Are there any additional fees?',
-                            answer: '$0 due when making an appointment. Payment via cash or card is due after completion of the job. A 5% processing fee applies unless paid with cash.',
+                            answer: '$0 due when making an appointment and any fees or expenses will be clearly stated beforehand. Payment via cash or card is due after completion of the job. A 5% processing fee may apply for unless paid with cash.',
                         },
                         {
                             question: 'I have more questions, how can I reach you?',
