@@ -111,9 +111,9 @@ export default function Checkout({
 
         const disabledDates = [
             '2025-06-18',
-            '2025-06-19',
-            '2025-07-04', // Independence Day
-            '2025-07-05', // Thanksgiving
+            '2025-07-13',
+            '2025-07-07', // Independence Day
+            '2025-07-08', // Thanksgiving
             '2025-07-06', // Christmas
         ];
 
