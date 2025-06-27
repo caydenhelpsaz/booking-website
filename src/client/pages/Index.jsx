@@ -72,6 +72,7 @@ export default function Index() {
                                 }}
                             >
                                 How can I help?
+                                Fully Insured & only $50/hr!!
                             </Typography>
 
                             <Typography
