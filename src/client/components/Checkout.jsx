@@ -920,7 +920,7 @@ export default function Checkout({
                                             onChange={handleChange('details')}
                                             fullWidth
                                             required
-                                            placeholder='Please describe the task(s) you need done, including links to items for assembly if possible.'
+                                            placeholder='Please describe the task(s) you need done, including links to items for assembly if applicable.'
                                         />
                                     </Grid>
                                 )}
@@ -952,8 +952,8 @@ export default function Checkout({
                                             }
                                         >
                                             {isSubmitting
-                                                ? 'Booking assembly date & time...'
-                                                : 'Book Assembly'}
+                                                ? 'Booking date & time...'
+                                                : 'Book Now'}
                                         </Button>
 
                                         <Button
