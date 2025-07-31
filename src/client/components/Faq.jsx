@@ -27,7 +27,7 @@ export default function Faq() {
                     {[  
                         {
                             question: 'What are your rates?',
-                            answer: "IKEA assembly jobs are fixed rate per item, based on current assembly rates from TaskRabbit (assembly service owned by IKEA). I will also include 15% off their listed flat rate. All other jobs are $50/hour, the average rate charged by taskers on that same platform unless otherwise stated. However, if you can provide a link to your item (i.e. Wayfair, Target, Walmart, Amazon etc.) that includes professional assembly as an optional add-on, I will BEAT whatever quote they give.",
+                            answer: "IKEA assembly jobs are fixed rate per item, based on current assembly rates from TaskRabbit (assembly service owned by IKEA). I will also include 15% off their listed flat rate. All other services are $50/hour (2 hour minimum), the average rate charged by taskers on that same platform unless otherwise stated. However, if you can provide a link to your item (i.e. Wayfair, Target, Walmart, Amazon etc.) that includes professional assembly as an optional add-on, I will BEAT whatever quote they give.",
                         },
                         {
                             question: 'What areas do you serve?',
@@ -47,7 +47,7 @@ export default function Faq() {
                         },
                         {
                             question: 'How does payment work? Are there any additional fees?',
-                            answer: '$0 due when making an appointment and any fees or expenses will be clearly stated beforehand. Payment via cash or card is due after completion of the job. A 5% processing fee may apply unless paid with cash.',
+                            answer: '$0 due when making an appointment and any fees or expenses will be clearly stated beforehand. Payment via cash or card is due directly after completion of the job. A 5% processing fee may apply unless paid with cash.',
                         },
                         {
                             question: 'I have more questions, how can I reach you?',
