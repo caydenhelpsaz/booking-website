@@ -110,11 +110,15 @@ export default function Checkout({
          */
 
         const disabledDates = [
-            '2025-06-18',
-            '2025-07-13',
-            '2025-07-07', // Independence Day
-            '2025-07-08', // Thanksgiving
-            '2025-07-06', // Christmas
+            '2025-08-06',
+            '2025-08-07',
+            '2025-08-08',            
+            '2025-08-09',
+            '2025-08-10',            
+            '2025-08-11',
+            '2025-08-12', // Independence Day
+            '2025-08-13', // Thanksgiving
+            '2025-08-14', // Christmas
         ];
 
         if (disabledDates.includes(dayjs(date).format('YYYY-MM-DD')))
