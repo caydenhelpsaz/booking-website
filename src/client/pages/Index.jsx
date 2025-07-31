@@ -88,7 +88,7 @@ export default function Index() {
                                     'Floor plan creation (custom layouts with precise measurements)',
                                     '3D modeling of real spaces (to-scale, accurate, and usable for projects)',
                                     'Graphic design (logos, flyers, brand visuals)',
-                                    'Logo design (custom-built identity for any brand or project)',
+                                    'General help aorund the house (To-do list, shopping, chores, etc.)',
                                     '3D rendering (realistic visuals for spaces, products, or ideas)',
                                     'Tech help (smart home setup, troubleshooting, or device help)',
                                     'Organization and decluttering (closets, garages, kitchens, and more)',
