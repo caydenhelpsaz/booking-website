@@ -71,7 +71,7 @@ export default function Index() {
                                     mb: 4
                                 }}
                             >
-                                $50/hr • Fully Insured • How Can I Help?
+                                Efficient • Insured • Affordable
                             </Typography>
 
                             <Typography
